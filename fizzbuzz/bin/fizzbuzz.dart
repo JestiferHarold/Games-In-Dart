@@ -1,14 +1,13 @@
-import 'dart:ffi';
 import 'dart:io';
 
 void main() {
   print("Enter the buzz number");
 
-  int? num = stdin.readByteSync();
+  int? num = int.parse(stdin.readLineSync()!);
 
   int f = 1;
 
-  while (f <= 10) {
+  while (f <= num) {
     if (f % 5 == 0 || f % 3 == 0) {
       print(" $f BUZZ");
     } else {
@@ -18,4 +17,3 @@ void main() {
     f++;
   }
 }
- 
